@@ -60,4 +60,18 @@ int main()
     void b=&a;
     printf("%d%d",a,b);
 }
+*//*
+#include<stdio.h>
+void inc(int *b)
+{
+    (*b)++;
+}
+int main()
+{
+    int a=10;
+    inc(&a);
+    printf("%d",a);
+    return 0;
+    //Ans=11
+}
 */

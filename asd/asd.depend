@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1710945020 source:c:\users\my self\desktop\c\asd\main.c
+	<stdlib.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdarg.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<string.h>
+	<stdio.h>
+	<stdio.h>
+

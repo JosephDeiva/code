@@ -6,8 +6,8 @@ int main()
     printf("%.2f",x);
     return 0;
 }
-*//*
-
+*/
+/*
 #include<stdio.h>
 int main()
 {

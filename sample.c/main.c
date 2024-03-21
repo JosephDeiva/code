@@ -1309,7 +1309,7 @@ int main()
         printf("%d ",p+i);
     }printf("\n");
 }
-*/
+*//*
 #include <stdio.h>
 int max_of_four(int a,int b,int c,int d)
 {
@@ -1351,4 +1351,654 @@ int main() {
     printf("%d", ans);
 
     return 0;
+}*//*
+//Take a 8 bit number and find what is their at 5th position .
+#include<stdio.h>
+int main()
+{
+    int n,k=5;
+    printf("Enter the value n: ");
+    scanf("%d",&n);
+    printf("%d bit of %d number is %d",k,n,fun(n,k));
 }
+int fun(int n,int k)
+{
+    return ((n>>(k-1))&1);
+}
+*//*
+//How to replace the array element.
+#include<stdio.h>
+int main()
+{
+    int a[5]={1,2,3,4,5};
+    int replace_value=20;
+    printf("Before replace array element: ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",a[i]);
+    }
+    printf("\n\n");
+    a[2]=replace_value;
+    printf("After replace array element: ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",a[i]);
+    } printf("\n");
+    return 0;
+
+}
+*//*
+#include<stdio.h>
+void reverseArray(int arr[],int size)
+{
+    int reversed[size];
+    for(int i=size-1, j=0;i>=0;i--,j++)
+    {
+        reversed[j]=arr[i];
+    }
+    for(int i=0;i<size;i++)
+    {
+        arr[i]=reversed[i];
+    }
+}
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int size= sizeof(arr)/sizeof (arr[0]);
+
+    printf("Before reverse array: ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",arr[i]);
+    }printf("\n");
+    reverseArray(arr,size);
+    printf("After reverse array: ");
+    for(int i=0;i<size;i++)
+        printf("%d ",arr[i]);
+
+    return 0;
+
+}
+*///How to reverse the Array without changing index number.
+/*
+#include<stdio.h>
+void reverseArray(int arr[],int size)
+{
+    int start=0;
+    int end =size-1;
+    while(start<end)
+    {
+        int temp=arr[start];
+        arr[start]=arr[end];
+        arr[end]=temp;
+
+        start++;
+        end--;
+    }
+}
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int size= sizeof(arr)/sizeof (arr[0]);
+
+    printf("Before reverse array: ");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d ",arr[i]);
+    }printf("\n\n");
+    reverseArray(arr,size);
+    printf("After reverse array: ");
+    for(int i=0;i<size;i++)
+        printf("%d ",arr[i]);
+
+        printf("\n");
+    return 0;
+
+}
+*//*
+#include<stdio.h>
+void calculate_the_maximum(int n, int k) {
+  //Write your code here.
+  int i,j,M1=0,M2=0,M3=0;
+  for(i=0;i<=n;i++)
+      for(j=i+1;j<=n;j++)
+      {
+          int and=i&j;
+          int or=i|j;
+          int xor=i^j;
+          if(and<k && M1<and)
+              M1=and;
+          if (or<k && M2<or)
+              M2=or;
+          if(xor<k && M3<xor)
+              M3=xor;
+
+      }
+
+  printf("%d\n",M1);
+  printf("%d\n",M2);
+  printf("%d",M3);
+}
+
+int main() {
+    int n, k;
+
+    scanf("%d %d", &n, &k);
+    calculate_the_maximum(n, k);
+
+    return 0;
+}*//*
+#include<stdio.h>
+int main()
+{
+    int n,k=31;
+    printf("Enter the value n: ");
+    scanf("%d",&n);
+    printf("MSB is %d",fun(n,k));
+}
+int fun(int n,int k)
+{
+    return (n&(1<<k));
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    int a=87,b;
+    b=(1<<6);
+    if(a&b)
+        printf("1");
+    else
+        printf("0");
+}*//*
+#include<stdio.h>
+int main()
+{
+    printf("ABC");
+    return 0;
+}
+*//*
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int *p; int a=12,temp=0;
+    //printf("Enter the value of n: ");
+   // scanf("%d",&p);
+    p=(int*)malloc(sizeof(int));
+    scanf("%d",p);
+    temp=*p;
+    *p=a;
+    a=temp;
+
+    printf("%d %d ",*p,a);
+    free(p);
+    /*for(i=0;i<n;i++)
+    {
+        scanf("%d",p+i);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",*p+i);
+    }printf("\n");
+    free(p);
+    p=NULL;
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",p+i);
+    }printf("\n");
+}
+*/
+//calloc reallocation.
+/*
+#include<stdio.h>
+void main()
+{
+    int *ptr,n,m;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    ptr=(int*)calloc(n,sizeof(int));
+    printf("Enter the value: ");
+    for(int i=0;i<n;i++)
+        scanf("%d",ptr+i);
+    printf("Printing number: ");
+    for(int i=0;i<n;i++)
+        printf("%d",*ptr+i);
+    printf("\nRe-allocation\nEnter new size: ");
+    scanf("%d",&m);
+    ptr=(int*)realloc(ptr,(m,sizeof(int)));
+    for(int i=n;i<m;i++)
+        scanf("%d",ptr+i);
+    printf("Printing");
+    for(int i=0;i<m;i++)
+        printf("%d",*ptr+i);
+    free(ptr);
+}
+*/
+//Malloc reallocation.
+/*
+#include<stdio.h>
+void main()
+{
+    int *ptr,n,m;
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    ptr=(int*)calloc(n,sizeof(int));
+    printf("Enter the value: ");
+    for(int i=0;i<n;i++)
+        scanf("%d",ptr+i);
+    printf("Printing number: ");
+    for(int i=0;i<n;i++)
+        printf("%d",*ptr+i);
+    printf("\nRe-allocation\nEnter new size: ");
+    scanf("%d",&m);
+    ptr=(int*)realloc(ptr,(m,sizeof(int)));
+    for(int i=n;i<m;i++)
+        scanf("%d",ptr+i);
+    printf("Printing");
+    for(int i=0;i<m;i++)
+        printf("%d",*ptr+i);
+    free(ptr);
+}
+*//*
+#include<stdio.h>
+int main(int argc,char *argv[])
+{
+    printf("%d",argc);
+}
+*//*
+//Palindrome number
+#include<stdio.h>
+int main()
+{
+    int a,rem,rev=0,org;
+    printf("enter the number: ");
+    scanf("%d",&a);
+    org=a;
+    while(a>0)
+    {
+        rem=a%10;
+        rev=rev*10+rem;
+        a=a/10;
+        printf("%d\n",rev);
+    }
+    if(org==rev)
+        printf("Its palindrome number: %d",rev);
+    else
+        printf("Its not palindrome number");
+}
+*//*
+//Armstrong Number
+#include<stdio.h>
+int main()
+{
+    int a,rem,rev=0,org;
+    printf("enter the number: ");
+    scanf("%d",&a);
+    org=a;
+    while(a>0)
+    {
+        rem=a%10;
+        rev=rev+rem*rem*rem;
+        a=a/10;
+        printf("%d\n",rev);
+    }
+    if(org==rev)
+        printf("Its palindrome number: %d",rev);
+    else
+        printf("Its not palindrome number");
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    int arr[]={2,7,11,15};
+    int num,sum=0;
+    printf("Enter the number: ");
+    scanf("%d",&num);
+    for(int i=0;i<4;i++)
+    {
+
+        for(int j=0;j<4;j++){
+            sum=arr[i]+arr[j];
+            if(sum==num)
+            {
+                printf("[%d,%d] ",i,j);
+                return ;
+
+            }
+            sum=0;
+        }
+
+
+
+    }
+
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    long long int a=12,b=98;
+    if(a<b)
+        printf("%d",getpid());//getpid is process ID.
+    else
+        printf("%d",getpid());
+}*//*//Exit operation
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int a=1;
+    for(int i=0;i<=10;i++)
+    {
+        if(i==2)
+        {
+            exit(1);
+
+        }
+
+        printf("Hii ");
+    }
+}*//*
+#include<stdio.h>
+int main()
+{
+     int a=0;
+    const int *ptr;
+    ptr=&a;
+   //const int *ptr=20;
+   *ptr++;
+    printf("%d",*ptr);
+}
+*/
+//Examples
+/*
+#include <stdio.h>
+
+int main()
+{
+    int i, j, rows;
+    int stars, spaces;
+
+    printf("Enter rows to print : ");
+    scanf("%d", &rows);
+
+
+    stars = 1;
+    spaces = rows - 1;
+
+    // Iterate through rows
+    for(i=1; i<rows*2; i++)
+    {
+        // Print spaces
+        for(j=1; j<=spaces; j++)
+            printf(" ");
+
+        // Print stars
+        for(j=1; j<stars*2; j++)
+            printf("*");
+
+        // Move to next line
+        printf("\n");
+
+        if(i<rows)
+        {
+            spaces--;
+            stars++;
+        }
+        else
+        {
+            spaces++;
+            stars--;
+        }
+    }
+
+    return 0;
+}*//*
+#include<stdio.h>
+int main()
+{
+   char str[]="%d %c";
+//int a=10;char b='a';float c=10.2f;
+   printf("%d",rand());
+   printf("%s",__DATE__);
+}
+*//*
+#include<stdio.h>
+int main()
+{
+
+    int x=5;
+     //int *const p=&x;
+   // ++(*p);
+    //printf("%d",*p);
+    printf("%d",x);
+}
+*/
+/*#include<stdio.h>
+int main()
+{
+    char p[20];
+    char *s="iies";
+    int l=strlen(s);
+    int i;
+    for(int i=0;i<l;i++)
+    {
+        p[i]=s[l-i];
+    }printf("%s",p);
+}*/
+//    Transpose of matrix
+/*
+#include<stdio.h>
+int main()
+{
+    int arr1[3][3]={1,2,3,4,5,6,7,8,9};
+    int arr2[3][3];
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++)
+    {
+        printf("%d",arr1[i][j]);
+
+    }printf("\n");
+    }
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++)
+        {
+            arr2[j][i]=arr1[i][j];
+        }
+    }printf("\n");
+
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++)
+            {
+                printf("%d",arr2[i][j]);
+
+            }printf("\n");
+        }
+
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    char p[20];
+    char str[10]="iies";
+    int *s=&str;
+    int lenght=strlen(str);
+    printf("%d",lenght);
+    for(int i=0;i<lenght;i++)
+    {
+        p[i]=s[lenght-i];
+    }
+    printf("%s",p);
+}*//*
+#include<stdio.h>
+int main()
+{
+    char a[20]="Hello";
+   loop: printf("%s",a);
+    goto loop;
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    //#include<stdlib.h>
+    //#include<stdio.h>
+    {
+        printf("Hello");
+    }
+}*//*
+#include<stdio.h>
+int main()
+{
+    char *a[]={"asd","dfg","qwe","vnm"};
+    for(int i=0;i<4;i++)
+    {
+        printf("%s ",a[i]);
+    }
+}*//*
+#include<stdio.h>
+int fun(int *arr)
+{
+    int temp,start=0,end=arr-1;
+
+    for(int i=3;i>=0;i--){
+        temp=*arr(start+i);
+        *arr(start+i)=*arr(end+i);
+        *arr(end+i)=temp;
+        start ++;
+        end--;
+
+    }return *arr;
+}
+int main()
+{
+    int *arr[4]={1,2,3,4};
+    //int *ret;
+    //int *ptr=&arr;
+  // ret=;
+   for(int i=0;i<4;i++)
+   printf("%d",fun(&arr));
+}*//*
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    printf("%d",fun(a));
+    if(fun(a)==0)
+        printf("Even number %d",fun(a));
+    else
+        printf("odd number %d",fun(a));
+}
+void fun(int a)
+{
+    return a%2;
+}
+*//*
+#include<stdio.h>
+int find_Smallest_Number(int arr[],int size){
+    int smallest=arr[0];
+
+    for(int i=0;i<size;i++){
+        if(arr[i]>smallest){
+            smallest=arr[i];
+        }
+    }
+     return smallest;
+}
+int main()
+{
+   int size;
+   printf("Enter the size of array: ");
+   scanf("%d",&size);
+
+   int arr[size];
+   printf("Enter %d elements:",size);
+   for(int i=0;i<size;i++){
+       scanf("%d",&arr[i]);
+   }
+   int smallest=find_Smallest_Number(arr,size);
+   printf("The smallest number in array= %d",smallest);
+   return 0;
+}*//*
+int main()
+{
+    int arr[5]={10,24,3,4,5};
+    int smallest=arr[0];
+    int largest=arr[0];
+    printf("%d\n",smallest);
+    for(int i=0;i<5;i++){
+        if(arr[i]<smallest){
+            smallest=arr[i];
+            printf("%d\n",smallest);
+        }
+        if(arr[i]>largest){
+            largest=arr[i];
+        }
+    }printf("%d\n",smallest);
+    printf("%d",largest);
+}
+*//*
+
+//Find Odd or Even using Recursion.
+
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the number: ");
+    scanf("%d",&a);
+    if(fun(a))
+        printf("Odd number: %d",a);
+    else
+        printf("Even number: %d",a);
+    return 0;
+}
+
+int fun(int a){
+
+    if(a==0)
+        return 0;
+    return fun(a-2);
+}
+*//*
+#include<stdio.h>
+int main()
+{
+    int size;
+    printf("Enter the size: ");
+    scanf("%d",&size);
+    int*p;
+    p=(int*)malloc(size*sizeof(int));
+  if(p==NULL)
+  {
+      printf("memory not allocated successfully");
+  }
+    else
+        for(int i=0;i<size;i++){
+        scanf("%d",p+i);
+    }
+    for(int i=0;i<size;i++){
+        printf("%d",*p+i);
+    }
+    free(p);
+}
+*//*
+#include<stdio.h>
+struct motor
+{
+    int no_parts;
+    char name[10];
+    double num;
+};
+int main()
+{
+    typedef struct motor b;
+    b a={1,"TVS",23.4};
+    printf("\n%d %s %.1f\n",a.no_parts,a.name,a.num);
+}
+*/

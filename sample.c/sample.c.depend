@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1707562724 source:c:\users\my self\desktop\c\sample.c\main.c
+1710243751 source:c:\users\my self\desktop\c\sample.c\main.c
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
@@ -76,15 +76,53 @@
 	<stdio.h>
 	<stdlib.h>
 	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
+	<stdio.h>
 
 1707279751 c:\users\my self\desktop\c\sample.c\iies.h
 
-1707453083 c:\users\my self\desktop\c\sample.c\booking.h
+1710243716 c:\users\my self\desktop\c\sample.c\booking.h
+	<stdio.h>
 
-1707463817 source:c:\users\my self\desktop\c\sample.c\trickyqs.c
+1707815193 source:c:\users\my self\desktop\c\sample.c\trickyqs.c
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
 	<stdio.h>
+	<stdio.h>
+
+1708504342 source:c:\users\my self\desktop\c\sample.c\test.c
 
